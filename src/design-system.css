@@ -1,0 +1,88 @@
+/* YUWU typography and colour contract. Loaded after legacy page layouts.
+   Based on YUWU Design System.md; responsive/readability exceptions documented
+   in DESIGN-SYSTEM-IMPLEMENTATION.md. */
+@font-face{font-family:'Noto Sans TC';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/NotoSansTC.ttf') format('truetype')}
+:root{
+  --color-cream:#f2f2e8;--color-charcoal:#1a1a1a;--color-gold:#b39e5d;
+  --color-warm-cream:#f7e6d2;--color-brown:#746f66;--color-brown-dark:#625e55;
+  --color-sand:#c9c1b7;--color-black:#141414;
+  --paper:var(--color-cream);--ink:var(--color-black);--muted:var(--color-brown);--cream:var(--color-warm-cream);
+  --font-body:'Work Sans','Noto Sans TC',sans-serif;
+  --font-display:Prociono,'Noto Sans TC',serif;
+  --text-body:14px;--text-label:12px;--text-card:18px;
+  --leading-body:2.15;--leading-heading:1.25;
+  --content-padding:48px;--section-padding:100px;
+  color:var(--ink);background:var(--paper);font-family:var(--font-body);
+}
+body,button,a{font-family:var(--font-body)}
+body{font-size:var(--text-body)}
+h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
+.shop-heading h1,.journal-heading h1,.journal-list h2,.about-intro h1,
+.about-process h2,.about-story h2,.contact-content h1,.preview-copy h2,
+.product-detail-copy h1,.related-heading h2,.room-copy h1,.product-alt-name,.product-intro{
+  font-family:var(--font-display);font-weight:400;
+}
+.logo{font-family:Megrim,cursive;font-size:20px}.site-footer .footer-logo{font-size:60px}
+.hero h1{font-size:64px;line-height:1;letter-spacing:0}
+.shop-heading h1,.journal-heading h1,.about-intro h1,.contact-content h1{
+  font-size:64px;line-height:1.2;letter-spacing:2px;
+}
+.section-head h2,.related-heading h2{font-size:32px;line-height:var(--leading-heading);letter-spacing:2px}
+.about-process h2,.about-story h2,.material-grid h3{font-size:24px;line-height:var(--leading-heading);letter-spacing:1px}
+.intro h2{font-family:var(--font-display);font-size:24px;line-height:1.6;letter-spacing:1px}
+.material-grid p,.lead,.shop-heading p,.journal-heading p,.journal-list p,
+.about-intro p,.about-process p,.about-story p,.about-signoff p,
+.preview-intro,.product-story{font-size:var(--text-body);line-height:var(--leading-body);color:var(--color-brown-dark);text-align:start}
+.hero-copy>p{font-size:18px;line-height:var(--leading-body);color:var(--paper)}
+.hero .eyebrow{color:var(--paper);font-size:var(--text-label);line-height:1.6}
+.hero-shade{background:rgba(20,20,20,.60)}
+.header--hero .nav button,.header--hero .lang{opacity:1}
+.header .nav button,.header .lang{font-size:18px;line-height:1.4}
+.product-info h3,.shop-grid .product-info h3,.page .product-info h3{
+  font-family:var(--font-display);font-size:var(--text-card);line-height:1.4;letter-spacing:0;
+  white-space:normal;overflow:visible;
+}
+.product-info span,.shop-grid .product-info span,.page .product-info span{
+  color:var(--color-brown-dark);font-size:var(--text-label);line-height:1.5;
+  white-space:normal;overflow:visible;
+}
+.product-info p,.page .product-info p{font-family:var(--font-display);font-size:14px;line-height:1.5;color:var(--ink);margin-bottom:0}
+.product-info{align-items:start;flex-wrap:wrap;gap:8px 16px}
+.dark-section .product-card{height:auto;min-height:552px;overflow:visible}
+.dark-section .product-number,.shop-grid .product-number{font-family:var(--font-display);font-size:22px;line-height:1}
+.shop-grid .product-card{background:var(--paper)}
+.shop-grid .product-card:hover,.shop-grid .product-card:focus-visible{background:var(--paper)}
+.product-card:hover{opacity:.88}.product-card:hover img{transform:none}
+.shop-grid .product-image img,.shop-grid .product-card:hover .product-image img{filter:none}
+.btn,.contact-actions a,.preview-actions a,.product-detail-actions a,.product-detail-actions button{
+  min-height:62px;height:auto;padding:16px 40px;font-size:18px;line-height:1.5;
+  font-family:var(--font-body);letter-spacing:0;border-radius:0;text-align:center;
+}
+.btn.light{background:var(--paper);color:var(--ink)}
+.contact-primary,.detail-primary,.preview-actions a{background:var(--color-gold);color:var(--color-charcoal)}
+.contact-actions,.product-detail-actions{flex-wrap:wrap}
+.contact-actions a{white-space:normal}
+.btn:hover,.contact-actions a:hover,.preview-actions a:hover,.product-detail-actions a:hover{opacity:.88;transition:opacity .2s ease}
+.contact-row>div,.contact-row a{font-family:var(--font-body);font-size:14px;line-height:2.15;letter-spacing:0;overflow-wrap:anywhere}
+.contact-row>span,.product-detail-copy dt{font-size:12px;line-height:1.6}
+.product-detail-copy dd{font-size:14px;line-height:2.15}
+.footer-column>span,.footer-bottom span:first-child,.footer-bottom span:last-child{color:var(--color-sand);opacity:1;font-size:12px;line-height:1.6}
+.footer-column a,.footer-column button{font-size:14px;line-height:1.6;opacity:1}
+.dark-section .eyebrow{color:var(--color-sand)}
+.nav,.product-preview article,.spot-card{box-shadow:none}.spot-card,.spot-card>img{border-radius:0}
+.shop-page{max-width:1440px}.section{padding:var(--section-padding) var(--content-padding)}
+@media(max-width:1100px){.contact-actions a{padding-inline:24px}}
+@media(max-width:760px){
+  :root{--content-padding:20px;--section-padding:64px}
+  .shop-heading h1,.journal-heading h1,.about-intro h1,.contact-content h1{font-size:40px;line-height:1.25;letter-spacing:1px}
+  .hero h1{font-size:clamp(36px,10.8vw,48px);line-height:1.2}
+  .hero-copy>p{font-size:14px;line-height:2.15}
+  .btn{min-width:0;padding:12px 16px;font-size:18px;min-height:56px}
+  .contact-actions a,.product-detail-actions a,.product-detail-actions button{padding-inline:20px;min-height:56px}
+  .dark-section .product-card{height:auto;min-height:510px}
+  .section-head h2,.related-heading h2{font-size:32px}
+  .intro h2{font-size:24px;letter-spacing:1px}
+  .hero-copy{bottom:26px}
+}
+@media(max-width:390px){.actions{flex-wrap:wrap}.actions .btn{padding-inline:10px;font-size:16px}}
+@media(max-height:600px){.hero{min-height:650px}}

@@ -8,13 +8,7 @@ const t = (lang, zh, en) => lang === 'zh' ? zh : en
 function Home({ lang, navigate }) {
   return <>
     <section className="hero">
-      <div className="hero-layers" aria-hidden="true">
-        <img className="hero-sea" src="/images/hero-sea.jpg" alt="" fetchPriority="high"/>
-        <img className="hero-drift hero-drift-left" src="/images/hero-driftwood.png" alt=""/>
-        <img className="hero-drift hero-drift-fork" src="/images/hero-driftwood.png" alt=""/>
-        <img className="hero-drift hero-drift-small" src="/images/hero-driftwood.png" alt=""/>
-        <span className="hero-wave"/>
-      </div>
+      <img src="/images/hero-beach.webp" alt={t(lang,'海灘上的漂流木','Driftwood on the shore')} fetchPriority="high"/>
       <div className="hero-shade"/><div className="hero-copy">
         <span className="eyebrow">{t(lang,'禹物再製所 · 台南','YU·WU RE-CREATION STUDIO · TAINAN')}</span>
         <h1>{t(lang,<>不是修復，<br/>而是再製。</>,<>Not restoration —<br/>transformation.</>)}</h1>

@@ -1,0 +1,30 @@
+/* Approved photographic / illustrated coast. All layers share one coordinate system. */
+.shore-hero{position:relative;margin-top:62px;overflow:hidden;background:#e9e1d1;height:min(56.28vw,calc(100svh - 62px));min-height:440px}
+.shore-stage{position:absolute;width:100%;height:100%;inset:0}
+.shore-stage>img,.shore-water{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:fill;pointer-events:none}
+.shore-water{overflow:visible}
+.shore-wet{fill:#889b96;opacity:.16}
+.shore-foam{fill:none;stroke:#faf4e7;stroke-width:7;stroke-linecap:round;stroke-dasharray:110 8 24 5 180 3;opacity:.72}
+.shore-foam-fine{stroke-width:2;opacity:.5}
+/* Static hero: tide and driftwood animations removed for performance. */
+.shore-tide{opacity:.35}
+.shore-wood-left{clip-path:polygon(10% 80%,36% 80%,36% 95%,10% 95%)}
+.shore-wood-middle{clip-path:polygon(43% 74%,72% 74%,72% 97%,43% 97%)}
+.shore-wood-right{clip-path:polygon(70% 72%,91% 72%,91% 83%,70% 83%)}
+.shore-introduction{padding:48px;background:var(--paper);color:var(--ink)}
+.shore-introduction-copy{max-width:1344px;margin:auto;display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:center}
+.shore-introduction .eyebrow{grid-column:1/-1}
+.shore-introduction h1{font:400 40px/1.3 var(--font-display);margin:16px 0;letter-spacing:1px;grid-row:2/4}
+.shore-introduction p{font-size:14px;line-height:2.15;margin:16px 0 0;max-width:600px}
+.shore-introduction .actions{margin:20px 0 0;flex-wrap:wrap}
+.shore-introduction .btn.light{background:var(--ink);color:var(--paper)}
+.shore-introduction .btn.outline{border-color:var(--ink);color:var(--ink)}
+@media(max-width:760px){
+ .shore-hero{margin-top:64px;min-height:0;height:560px}
+ .shore-stage{width:995px;left:50%;transform:translateX(-50%)}
+ .shore-introduction{padding:32px 20px 40px}
+ .shore-introduction-copy{display:block}
+ .shore-introduction h1{font-size:32px}
+ .shore-introduction .actions{gap:12px}
+ .shore-introduction .btn{flex:1;padding-inline:16px}
+}
