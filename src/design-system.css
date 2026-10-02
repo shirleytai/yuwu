@@ -179,3 +179,30 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
   .header.is-open .logo,.header.is-open .lang{color:var(--ink)}
 }
 html[lang="zh-Hant"] .header .nav button,html[lang="zh-Hant"] .product-back{font-weight:500}
+
+/* Mobile polish: menu, product details, footer, room */
+@media(max-width:680px){
+  /* Menu: one tidy list with dividers instead of a loose 2×2 grid */
+  .nav{grid-template-columns:1fr;gap:0;padding:4px 20px 12px;border-bottom:1px solid rgba(116,111,102,.25)}
+  .header.is-open .nav{box-shadow:0 16px 24px rgba(20,20,20,.08)}
+  .header .nav button{min-height:0;height:52px;padding:0;opacity:1;border-bottom:1px solid rgba(116,111,102,.15)}
+  .header .nav button:last-child{border-bottom:0}
+  .header .nav button.active{font-weight:600}
+
+  /* Product details: narrow label column so values don't wrap early */
+  .product-detail-copy dl>div{grid-template-columns:64px 1fr;gap:16px;padding:10px 0}
+  .product-detail-copy dd{font-size:14px;line-height:1.8}
+
+  /* Footer: 2×2 grid, tighter rhythm */
+  .footer-grid{gap:40px 24px;padding-bottom:44px}
+  .footer-connect{grid-column:auto}
+  .footer-column{gap:12px}
+  .footer-column a,.footer-column button{font-size:14px}
+  .footer-connect a{font-size:13px}
+  .site-footer .footer-logo{font-size:40px}
+
+  /* Room: card sits where the headline is, headline hides while a card is open */
+  .spot-card{bottom:28px}
+  .room-copy{transition:opacity .25s ease}
+  .room-page:has(.spot-card) .room-copy{opacity:0}
+}
