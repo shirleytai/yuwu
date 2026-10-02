@@ -1,5 +1,5 @@
 export const products = [
-  ['001','ironTable.jpg','「攀」高腳桌','“Ascent” High Table','拾得 · 鐵＋木','Found · Iron + Wood','NT$ 9,000'],
+  ['001','ironTable.webp','「攀」高腳桌','“Ascent” High Table','拾得 · 鐵＋木','Found · Iron + Wood','NT$ 9,000'],
   ['002','dripperStand.jpg','手沖濾架 二號','Dripper Stand No. 2','拾得 · 鐵＋玻璃','Found · Iron + Glass','NT$ 6,800'],
   ['003','candleBearer.webp','燭台「同行」','Candle Bearer','拾得 · 鐵＋枝','Found · Iron + Branch','NT$ 5,200'],
   ['004','charredTray.webp','炭化圓盤','Charred Disc Tray','再生 · 炭化木＋黃銅','Salvaged · Wood + Brass','NT$ 3,600'],

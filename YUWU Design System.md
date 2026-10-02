@@ -15,21 +15,21 @@ updated: 2026-07-12
 # YUWU Design System (禹物再製所)
 
 > [!abstract] What this is
-> The complete brand + design-system reference for **YUWU (禹物再製所)**, a Taiwanese salvaged-object art studio in Tainan. Colours, typography, layout, components, voice, and photography rules — everything needed to design on-brand.
+> The complete brand + design-system reference for **YUWU (禹物再製所)**, a Taiwanese salvaged-object art studio in Taipei. Colours, typography, layout, components, voice, and photography rules — everything needed to design on-brand.
 
 ## About the Brand
 
-YUWU (禹物再製所) is a Taiwanese art-and-craft studio founded by 戴禹財 and 蔡佩莉 in Tainan, Taiwan. Beginning with driftwood sculpture twenty years ago, the studio has evolved into a multi-material practice of salvaged-object transformation — turning found iron, reclaimed wood, and discarded everyday objects into furniture, décor, and art. The philosophy is ecological and poetic: **not restoration, but transformation. Not erasing the past, but carrying it forward.**
+YUWU (禹物再製所) is a Taiwanese art-and-craft studio founded by 戴禹財 and 蔡佩莉 in Taipei, Taiwan. Beginning with driftwood sculpture twenty years ago, the studio has evolved into a multi-material practice of salvaged-object transformation — turning found iron, reclaimed wood, and discarded everyday objects into furniture, décor, and art. The philosophy is ecological and poetic: **not restoration, but transformation. Not erasing the past, but carrying it forward.**
 
 | Field | Value |
 |---|---|
 | Website | https://yu-wu.studio |
 | Email | hello@yu-wu.studio |
-| Address | No. 7, Lane 218, Chenggong Rd, North District, Tainan |
+| Address | No. 345, Sec. 1, Dihua St, Datong District, Taipei (near MRT Daqiaotou Station 大橋頭站) |
 | Studio hours | Wed – Sun · 14:00 – 19:00 (by appointment) |
 | Instagram | @yuwu-studio |
 | Threads | @yuwu.recreation |
-| Copyright | © 2026 Yu·Wu Re-creation Studio · Tainan |
+| Copyright | © 2026 Yu·Wu Re-creation Studio · Taipei |
 
 ---
 

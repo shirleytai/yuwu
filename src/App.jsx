@@ -11,7 +11,7 @@ function Home({ lang, navigate }) {
     <section className="hero">
       <img src={img('hero-beach.webp')} alt={t(lang,'海灘上的漂流木','Driftwood on the shore')} fetchPriority="high"/>
       <div className="hero-shade"/><div className="hero-copy">
-        <span className="eyebrow">{t(lang,'禹物再製所 · 台南','YU·WU RE-CREATION STUDIO · TAINAN')}</span>
+        <span className="eyebrow">{t(lang,'禹物再製所 · 台北','YU·WU RE-CREATION STUDIO · TAIPEI')}</span>
         <h1>{t(lang,<>不是修復，<br/>而是再製。</>,<>Not restoration —<br/>transformation.</>)}</h1>
         <p>{t(lang,'拾得的木與鐵，帶著過去，走進今日的生活。',"Salvaged wood, found iron — objects that carry their past into today's life.")}</p>
         <div className="actions"><button className="btn light" onClick={() => navigate('shop')}>{t(lang,'瀏覽作品','View the works')}</button><button className="btn outline" onClick={() => navigate('about')}>{t(lang,'品牌理念','Our direction')}</button></div>
@@ -80,7 +80,7 @@ function Shop({ lang, selected, setSelected }) {
     return () => { document.body.classList.remove('modal-open'); window.removeEventListener('keydown', close) }
   }, [selected, setSelected])
   return <main className="shop-page">
-    <header className="shop-heading"><span>{t(lang,'商品','SHOP')}</span><h1>{t(lang,'每件器物，各自成為一段生命','Each piece, a life of its own')}</h1><p>{t(lang,'所有作品皆為一件制，於台南工作室以回收材料再製。來信即可預留作品。','Every work is one of a kind, re-created from salvaged materials in our Tainan studio. Email us to reserve a piece.')}</p></header>
+    <header className="shop-heading"><span>{t(lang,'商品','SHOP')}</span><h1>{t(lang,'每件器物，各自成為一段生命','Each piece, a life of its own')}</h1><p>{t(lang,'所有作品皆為一件制，於台北工作室以回收材料再製。來信即可預留作品。','Every work is one of a kind, re-created from salvaged materials in our Taipei studio. Email us to reserve a piece.')}</p></header>
     <div className="shop-filters" aria-label={t(lang,'商品分類','Product categories')}>{filters.map(([id,zh,en])=><button key={id} className={filter===id?'active':''} onClick={()=>setFilter(id)}>{t(lang,zh,en)}</button>)}</div>
     <div className="shop-grid">{visible.map(p=><ProductCard key={p.number} item={p} lang={lang} onClick={()=>setSelected(p)}/>)}</div>
     {selected&&<ProductPreview product={selected} lang={lang} close={()=>setSelected(null)}/>}
@@ -128,7 +128,7 @@ function About({ lang }) {
     <section className="about-process">{process.map(([image,en,zh,enText,zhText])=><article key={en}><div className="process-icon"><img src={img(image)} alt=""/></div><h2>{t(lang,zh,en)}</h2><p>{t(lang,zhText,enText)}</p></article>)}</section>
     <section className="about-story about-story--portrait"><img src={img('yu-tsai.jpg')} alt="戴禹財工作照"/><div><h2>{t(lang,'戴禹財','Yu-Tsai Tai')}</h2><p>{t(lang,'戴禹財生於 1974 年，是一位長年安靜浸潤於藝術與空間設計的創作者，足跡從灣潭雙溪到鶯歌。從繪畫、陶藝到漂流木藝術與複合媒材創作，他的作品映照出一段豐厚的生命與創作旅程。','Born in 1974, Yu-Tsai Tai is a visionary creator who has spent years quietly immersed in art and spatial design. From painting and ceramics to driftwood art and mixed-media creations, his works reflect a rich journey of life and creativity.')}</p><p>{t(lang,'雖為自學，他深受達利的想像力、梵谷的情感力量與禪的靜觀精神啟發。多樣的創作揉合想像、溫度與藝術的自由。',"Though self-taught, he was deeply inspired by Dalí's imagination, Van Gogh's emotional power, and the meditative spirit of Zen.")}</p></div></section>
     <section className="about-story about-story--recreation"><div><h2>{t(lang,'再製','Re-Creation')}</h2><p>{t(lang,'禹物再製所是一個致力於生態意識藝術、讓有意義的物件重獲新生的創作空間。從二十多年前的漂流木創作開始，工作室如今以複合媒材工藝與共創的方式，轉化蒐集而來的作品與舊物。',"Yu's Re-Creation Studio is a creative space dedicated to eco-conscious art and the revival of meaningful objects. Starting from driftwood creations over 20 years ago, the studio now transforms collected artworks and vintage pieces through mixed-media craftsmanship.")}</p></div><img src={img('workshopCarving.jpg')} alt="工作室雕刻過程"/></section>
-    <section className="about-signoff"><div><strong className="logo">YU·WU</strong><span>{t(lang,'禹物再製所 · 台南','RE-CREATION STUDIO · TAINAN')}</span></div><p>{t(lang,'禹物再製所是由戴禹財與蔡佩莉共同創立的多領域創作工作室。從二十多年前的漂流木藝術開始，逐漸走向以永續與自然共生之美為靈感的複合媒材與物件轉化創作。','Yu’s Re-Creation Studio is a multidisciplinary creative studio founded by Yu-Tsai Tai and Pei-Li Tsai. Beginning with driftwood art over 20 years ago, the studio has evolved into mixed-media and object transformation inspired by sustainability and nature.')}</p></section>
+    <section className="about-signoff"><div><strong className="logo">YU·WU</strong><span>{t(lang,'禹物再製所 · 台北','RE-CREATION STUDIO · TAIPEI')}</span></div><p>{t(lang,'禹物再製所是由戴禹財與蔡佩莉共同創立的多領域創作工作室。從二十多年前的漂流木藝術開始，逐漸走向以永續與自然共生之美為靈感的複合媒材與物件轉化創作。','Yu’s Re-Creation Studio is a multidisciplinary creative studio founded by Yu-Tsai Tai and Pei-Li Tsai. Beginning with driftwood art over 20 years ago, the studio has evolved into mixed-media and object transformation inspired by sustainability and nature.')}</p></section>
   </main>
 }
 
