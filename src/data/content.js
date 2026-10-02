@@ -2,7 +2,7 @@ export const products = [
   ['001','ironTable.webp','「攀」高腳桌','“Ascent” High Table','拾得 · 鐵＋木','Found · Iron + Wood','NT$ 9,000'],
   ['002','dripperStand.jpg','手沖濾架 二號','Dripper Stand No. 2','拾得 · 鐵＋玻璃','Found · Iron + Glass','NT$ 6,800'],
   ['003','candleBearer.webp','燭台「同行」','Candle Bearer','拾得 · 鐵＋枝','Found · Iron + Branch','NT$ 5,200'],
-  ['004','charredTray.webp','炭化圓盤','Charred Disc Tray','再生 · 炭化木＋黃銅','Salvaged · Wood + Brass','NT$ 3,600'],
+  ['004','charredTray-v2.webp','炭化圓盤','Charred Disc Tray','再生 · 炭化木＋黃銅','Salvaged · Wood + Brass','NT$ 3,600'],
   ['005','moonBookends.webp','月相書擋','Moon Bookends','再生 · 黃銅','Salvaged · Brass','NT$ 4,200'],
   ['006','driftwoodClocks.jpg','漂流木時鐘','Driftwood Clock','漂流木＋再生金屬','Driftwood · Metal','NT$ 5,800'],
   ['007','haloVessel.jpg','「環」燭器','“Halo” Vessel','拾得 · 鐵＋枝','Found · Iron + Branch','NT$ 7,200'],
