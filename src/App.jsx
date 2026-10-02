@@ -177,10 +177,12 @@ export default function App() {
 function Footer({ lang, navigate }) {
   return <footer className="site-footer">
     <div className="footer-grid">
-      <div className="footer-column"><span>{t(lang,'商品','SHOP')}</span><button onClick={()=>navigate('shop')}>{t(lang,'家具','Furniture')}</button><button onClick={()=>navigate('shop')}>{t(lang,'器物','Decor')}</button><button onClick={()=>navigate('shop')}>{t(lang,'藝術','Art')}</button></div>
-      <div className="footer-column"><span>{t(lang,'顧客服務','CUSTOMER')}</span><button onClick={()=>navigate('contact')}>{t(lang,'聯絡我們','Contact Us')}</button><a href="#legal">{t(lang,'法律資訊','Legal')}</a><a href="#faq">{t(lang,'常見問題','FAQ')}</a><a href="#trade">{t(lang,'商業合作','Trade')}</a></div>
-      <div className="footer-column"><span>{t(lang,'關於我們','COMPANY')}</span><button onClick={()=>navigate('about')}>{t(lang,'品牌故事','Our story')}</button><button onClick={()=>navigate('journal')}>{t(lang,'展覽','Exhibition')}</button><button onClick={()=>navigate('contact')}>{t(lang,'合作','Cooperation')}</button></div>
-      <div className="footer-column footer-connect"><span>{t(lang,'連結','CONNECT')}</span><a href="mailto:hello@yu-wu.studio">hello@yu-wu.studio</a><a href="https://youtube.com" target="_blank" rel="noreferrer">▻&nbsp;&nbsp; Youtube</a><a href="https://threads.net" target="_blank" rel="noreferrer">◌&nbsp;&nbsp; Threads</a></div>
+      <div className="footer-column"><span>SHOP</span><button onClick={()=>navigate('shop')}>{t(lang,'家具','Furniture')}</button><button onClick={()=>navigate('shop')}>{t(lang,'擺飾','Decor')}</button><button onClick={()=>navigate('shop')}>{t(lang,'藝術','Art')}</button></div>
+      <div className="footer-column"><span>CUSTOMER</span><button onClick={()=>navigate('contact')}>{t(lang,'聯絡我們','Contact Us')}</button><a href="#legal">{t(lang,'權益聲明','Legal')}</a><a href="#faq">FAQ</a><a href="#trade">{t(lang,'同業合作','Trade')}</a></div>
+      <div className="footer-column"><span>COMPANY</span><button onClick={()=>navigate('about')}>{t(lang,'品牌故事','Our story')}</button><button onClick={()=>navigate('journal')}>{t(lang,'展覽','Exhibition')}</button><button onClick={()=>navigate('contact')}>{t(lang,'合作洽詢','Cooperation')}</button></div>
+      <div className="footer-column footer-connect"><span>CONNECT</span><a href="mailto:hello@yu-wu.studio">hello@yu-wu.studio</a>
+        <a href="https://youtube.com" target="_blank" rel="noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5 L15 12 L10 14.5 Z" fill="currentColor" stroke="none"/></svg>Youtube</a>
+        <a href="https://threads.net" target="_blank" rel="noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M12 21c-4.5 0-7.5-3-7.5-9S7.5 3 12 3c3.8 0 6.6 2 7.3 5.7"/><path d="M19.3 8.7c-2.3-.8-6.3-.7-6.3 2.3 0 2.4 5.5 2.6 5.5 5.2 0 1.8-1.8 2.8-3.5 2.8-2 0-3.5-1-3.5-3"/></svg>Threads</a></div>
       <button className="footer-logo logo" onClick={()=>navigate('home')}>YU·WU</button>
     </div>
     <div className="footer-bottom"><span>{t(lang,'與自然同行','In step with nature')}</span><span>© 2026 Yu·Wu Re-creation Studio</span></div>

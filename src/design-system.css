@@ -133,3 +133,30 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
   .article-pair img{height:min(110vw,480px)}
   .article-cta{width:100%;min-height:56px}
 }
+
+/* Footer — matches the original Claude Design footer */
+.site-footer{padding:88px 48px 0}
+.footer-grid{max-width:1180px;margin:0 auto;padding-bottom:64px;grid-template-columns:1fr 1fr 1fr 1.2fr auto;gap:48px}
+.footer-column{gap:14px}
+.footer-column>span{font-size:11px;line-height:1;letter-spacing:.1em;text-transform:uppercase;color:var(--color-brown);opacity:1;margin-bottom:6px}
+.footer-column a,.footer-column button{font-size:14px;line-height:1.4;color:var(--color-cream);opacity:.82}
+.footer-column a:hover,.footer-column button:hover{opacity:.6}
+.footer-connect a{font-size:13px;display:inline-flex;align-items:center;gap:10px}
+.site-footer .footer-logo{font-size:52px;align-self:center}
+.footer-bottom{max-width:1180px;min-height:0;padding:20px 0;border-top-color:rgba(116,111,102,.22)}
+.footer-bottom span:first-child,.footer-bottom span:last-child{color:var(--color-cream);font-size:13px}
+.footer-bottom span:first-child{opacity:.6}
+.footer-bottom span:last-child{opacity:.38}
+@media(max-width:900px){
+  .site-footer{padding-top:64px}
+  .footer-grid{grid-template-columns:repeat(2,1fr);gap:52px}
+  .site-footer .footer-logo{grid-column:1/-1;justify-self:start}
+}
+@media(max-width:680px){
+  .site-footer{padding:56px 20px 0}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:46px 24px;padding-bottom:52px}
+  .footer-connect{grid-column:1/-1}
+  .site-footer .footer-logo{font-size:44px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+  .footer-bottom span:last-child{font-size:11px}
+}
