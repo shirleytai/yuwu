@@ -6,7 +6,13 @@
 
 - `npm run dev` — 本機開發（Vite）
 - `npm run build` — 建置到 `dist/`；改完一定要跑，確認沒有錯誤
-- `npm run preview` — 預覽建置結果
+- `npm run preview` — 預覽建置結果（網址在 `/yuwu/` 底下）
+
+## 部署
+
+網站在 https://shirleytai.github.io/yuwu/（GitHub repo `shirleytai/yuwu`，公開）。push 到 `main` 會由 `.github/workflows/deploy.yml` 自動建置並部署，約 1–2 分鐘。
+
+正式版的 base 路徑是 `/yuwu/`（見 `vite.config.js`），所以 JSX 裡的圖片一律用 `img('檔名')`（`src/asset.js`），不要寫死 `/images/...`；CSS 裡的 `url('/fonts/...')` Vite 會自動處理。
 
 ## 架構
 

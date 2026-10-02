@@ -86,3 +86,22 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
 }
 @media(max-width:390px){.actions{flex-wrap:wrap}.actions .btn{padding-inline:10px;font-size:16px}}
 @media(max-height:600px){.hero{min-height:650px}}
+
+/* Shop grid: number sits directly above the image, flush with its right edge */
+.shop-grid .product-card{padding:0 0 22px}
+.shop-grid .product-number{position:static;display:block;text-align:right;margin-bottom:10px}
+.shop-grid .product-info{margin-top:16px}
+
+/* Mobile header: language toggle sits next to the menu button, not mid-bar */
+@media(max-width:680px){
+  .header{gap:12px}
+  .menu{margin-left:0}
+  .room-copy h1 br{display:none}
+  .room-copy h1{font-size:28px}
+}
+
+/* Tablet: contact page stacks so the label/value rows have room */
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;gap:48px}
+  .contact-photo img{height:min(80vw,560px)}
+}
