@@ -132,7 +132,23 @@ function About({ lang }) {
   </main>
 }
 
-function Journal({ lang }) { return <main className="journal-page"><header className="journal-heading"><span>{t(lang,'誌','JOURNAL')}</span><h1>{t(lang,'工作室手記','Notes from the studio')}</h1><p>{t(lang,'委託案、進行中的創作，以及器物最後落腳的地方。','Commissions, works in progress, and where the objects end up living.')}</p></header><div className="journal-list">{journal.map((a,i)=><article key={a.titleEn}><img src={img(a.image)} alt={lang==='zh'?a.titleZh:a.titleEn} loading={i?'lazy':'eager'}/><div><span className="journal-meta">{lang==='zh'?a.tagZh:a.tagEn} · {lang==='zh'?a.dateZh:a.dateEn}</span><h2>{lang==='zh'?a.titleZh:a.titleEn}</h2><p>{lang==='zh'?a.textZh:a.textEn}</p><button>{t(lang,'閱讀全文','read the entry')} →</button></div></article>)}</div></main> }
+function Journal({ lang, openArticle }) { return <main className="journal-page"><header className="journal-heading"><span>{t(lang,'誌','JOURNAL')}</span><h1>{t(lang,'工作室手記','Notes from the studio')}</h1><p>{t(lang,'委託案、進行中的創作，以及器物最後落腳的地方。','Commissions, works in progress, and where the objects end up living.')}</p></header><div className="journal-list">{journal.map((a,i)=><article key={a.id} onClick={()=>openArticle(a.id)}><img src={img(a.image)} alt={lang==='zh'?a.titleZh:a.titleEn} loading={i?'lazy':'eager'}/><div><span className="journal-meta">{lang==='zh'?a.tagZh:a.tagEn} · {lang==='zh'?a.dateZh:a.dateEn}</span><h2>{lang==='zh'?a.titleZh:a.titleEn}</h2><p>{lang==='zh'?a.textZh:a.textEn}</p><button>{t(lang,'閱讀全文','read the entry')} →</button></div></article>)}</div></main> }
+
+function Article({ id, lang, navigate }) {
+  const a = journal.find(j=>j.id===id) || journal[0]
+  const title = lang==='zh'?a.titleZh:a.titleEn
+  return <main className="article-page">
+    <header className="article-head">
+      <button className="product-back" onClick={()=>navigate('journal')}>← {t(lang,'回到誌','back to journal')}</button>
+      <span className="journal-meta">{lang==='zh'?a.tagZh:a.tagEn} · {lang==='zh'?a.dateZh:a.dateEn}</span>
+      <h1>{title}</h1>
+    </header>
+    <img className="article-cover" src={img(a.image)} alt={title}/>
+    <div className="article-body">{a.paras.map((p,i)=><p key={i}>{lang==='zh'?p.zh:p.en}</p>)}</div>
+    <div className="article-pair"><img src={img(a.image2)} alt="" loading="lazy"/><img src={img(a.image3)} alt="" loading="lazy"/></div>
+    <div className="article-outro"><p>{lang==='zh'?a.outroZh:a.outroEn}</p><button className="article-cta" onClick={()=>navigate('contact')}>{t(lang,'洽詢客製委託','Start a commission')}</button></div>
+  </main>
+}
 
 function Contact({ lang }) {
   const rows = [
@@ -152,10 +168,10 @@ function Contact({ lang }) {
 
 export default function App() {
   const queryProduct = products.find(p=>p.number===new URLSearchParams(window.location.search).get('product'))
-  const [page,setPage]=useState(queryProduct?'product':'home'), [lang,setLang]=useState(()=>localStorage.getItem('yuwu-lang')||'en'), [selected,setSelected]=useState(null), [detailProduct]=useState(queryProduct)
+  const [page,setPage]=useState(queryProduct?'product':'home'), [lang,setLang]=useState(()=>localStorage.getItem('yuwu-lang')||'en'), [selected,setSelected]=useState(null), [detailProduct]=useState(queryProduct), [articleId,setArticleId]=useState(null)
   const navigate=(next)=>{if(window.location.search)window.history.replaceState({},'',window.location.pathname);setPage(next);setSelected(null);window.scrollTo({top:0,behavior:'smooth'})}
   useEffect(()=>{localStorage.setItem('yuwu-lang',lang);document.documentElement.lang=lang==='zh'?'zh-Hant':'en'},[lang])
-  return <><Header page={page} navigate={navigate} lang={lang} setLang={setLang}/>{page==='home'&&<Home lang={lang} navigate={navigate}/>} {page==='room'&&<Room lang={lang} navigate={navigate}/>} {page==='shop'&&<Shop lang={lang} selected={selected} setSelected={setSelected}/>} {page==='product'&&<ProductDetail product={detailProduct} lang={lang} navigate={navigate}/>} {page==='about'&&<About lang={lang}/>} {page==='journal'&&<Journal lang={lang}/>} {page==='contact'&&<Contact lang={lang}/>} {page!=='room'&&<Footer lang={lang} navigate={navigate}/>}</>
+  return <><Header page={page} navigate={navigate} lang={lang} setLang={setLang}/>{page==='home'&&<Home lang={lang} navigate={navigate}/>} {page==='room'&&<Room lang={lang} navigate={navigate}/>} {page==='shop'&&<Shop lang={lang} selected={selected} setSelected={setSelected}/>} {page==='product'&&<ProductDetail product={detailProduct} lang={lang} navigate={navigate}/>} {page==='about'&&<About lang={lang}/>} {page==='journal'&&<Journal lang={lang} openArticle={id=>{setArticleId(id);navigate('article')}}/>} {page==='article'&&<Article id={articleId} lang={lang} navigate={navigate}/>} {page==='contact'&&<Contact lang={lang}/>} {page!=='room'&&<Footer lang={lang} navigate={navigate}/>}</>
 }
 
 function Footer({ lang, navigate }) {

@@ -105,3 +105,31 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
   .contact-layout{grid-template-columns:1fr;gap:48px}
   .contact-photo img{height:min(80vw,560px)}
 }
+
+/* Journal article */
+.journal-list article{cursor:pointer}
+.journal-list article:hover{opacity:.85}
+.article-page{background:var(--paper);color:var(--ink);padding-bottom:100px}
+.article-head{max-width:900px;margin:0 auto;padding:126px var(--content-padding) 0}
+.article-head .product-back{display:inline-block;margin-bottom:40px}
+.article-head h1{font:400 52px/1.25 var(--font-display);letter-spacing:1px;margin:16px 0 0}
+.article-cover{display:block;width:calc(100% - 2 * var(--content-padding));max-width:1104px;height:620px;object-fit:cover;margin:56px auto 0}
+.article-body{max-width:760px;margin:0 auto;padding:64px var(--content-padding) 40px}
+.article-body p{font:400 18px/1.88 var(--font-display);letter-spacing:1px;margin:0 0 32px}
+.article-pair{max-width:1104px;margin:0 auto;padding:0 var(--content-padding) 64px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.article-pair img{width:100%;height:480px;object-fit:cover;display:block}
+.article-outro{max-width:760px;margin:0 auto;padding:0 var(--content-padding)}
+.article-outro p{font-size:14px;line-height:2.15;color:var(--color-brown-dark);margin:0}
+.article-cta{margin-top:40px;min-height:62px;padding:0 36px;background:transparent;border:1px solid var(--ink);color:var(--ink);font-size:16px;cursor:pointer}
+.article-cta:hover{opacity:.66}
+@media(max-width:760px){
+  .article-head{padding-top:104px}
+  .article-head .product-back{margin-bottom:28px}
+  .article-head h1{font-size:30px;line-height:1.35}
+  .article-cover{height:min(80vw,420px);margin-top:32px}
+  .article-body{padding-top:40px;padding-bottom:16px}
+  .article-body p{font-size:16px;margin-bottom:24px}
+  .article-pair{grid-template-columns:1fr;gap:16px;padding-bottom:40px}
+  .article-pair img{height:min(110vw,480px)}
+  .article-cta{width:100%;min-height:56px}
+}

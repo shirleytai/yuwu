@@ -13,7 +13,7 @@ export default function Header({ page, navigate, lang, setLang }) {
   return <header className={`header ${page === 'home' && !scrolled ? 'header--hero' : ''} ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
     <button className="logo" onClick={() => go('home')}>YU·WU</button>
     <nav className="nav" aria-label="主要導覽">
-      {items.map(([id, zh, en]) => <button key={id} className={page === id || (page === 'product' && id === 'shop') ? 'active' : ''} onClick={() => go(id)}>{lang === 'zh' ? zh : en}</button>)}
+      {items.map(([id, zh, en]) => <button key={id} className={page === id || (page === 'product' && id === 'shop') || (page === 'article' && id === 'journal') ? 'active' : ''} onClick={() => go(id)}>{lang === 'zh' ? zh : en}</button>)}
     </nav>
     <button className="lang" onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}>{lang === 'zh' ? 'EN' : '中'}</button>
     <button className="menu" aria-label="開啟選單" aria-expanded={open} onClick={() => setOpen(!open)}><i/><i/></button>
