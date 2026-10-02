@@ -36,8 +36,6 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
 .hero-copy>p{font-size:18px;line-height:var(--leading-body);color:var(--paper)}
 .hero .eyebrow{color:var(--paper);font-size:var(--text-label);line-height:1.6}
 .hero-shade{background:rgba(20,20,20,.60)}
-.header--hero .nav button,.header--hero .lang{opacity:1}
-.header .nav button,.header .lang{font-size:18px;line-height:1.4}
 .product-info h3,.shop-grid .product-info h3,.page .product-info h3{
   font-family:var(--font-display);font-size:var(--text-card);line-height:1.4;letter-spacing:0;
   white-space:normal;overflow:visible;
@@ -160,3 +158,24 @@ h1,h2,h3,.hero h1,.page h1,.section h2,.material-grid h3,.product-card h3,
   .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
   .footer-bottom span:last-child{font-size:11px}
 }
+
+/* Header — matches the original Claude Design nav */
+.header{height:62px;gap:32px;background:var(--color-cream);border-bottom:1px solid rgba(116,111,102,.25)}
+.header--hero{background:transparent;border-bottom-color:transparent;color:var(--color-cream)}
+.header .logo{font-size:20px;line-height:1;color:var(--ink)}
+.header--hero .logo{color:var(--color-cream)}
+.nav{gap:32px}
+.header .nav button{font-size:14px;line-height:1.4;padding:4px 0;color:var(--color-brown-dark);opacity:.75;text-transform:lowercase}
+.header--hero .nav button{color:var(--color-cream)}
+.header .nav button:hover,.header .nav button.active{opacity:1}
+.header .lang{width:auto;padding:6px 12px;border:0;box-shadow:inset 0 0 0 1px currentColor;font-size:12px;line-height:1.2;letter-spacing:.08em;color:var(--color-brown-dark);opacity:1}
+.header--hero .lang{color:var(--color-cream)}
+.header .lang:hover{opacity:.66}
+.product-back{border-bottom:0;padding:0;font-size:14px;color:var(--color-brown)}
+.product-back:hover{opacity:.66}
+@media(max-width:680px){
+  .header{height:64px}
+  .header .nav button{font-size:16px;color:var(--ink)}
+  .header.is-open .logo,.header.is-open .lang{color:var(--ink)}
+}
+html[lang="zh-Hant"] .header .nav button,html[lang="zh-Hant"] .product-back{font-weight:500}
